@@ -2,7 +2,9 @@
 # Prerequisites
 *.d
 hello_arm32
-hello 
+hello
+*.vscode
+ *.json 
 
 # Object files
 *.o
