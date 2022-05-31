@@ -1,6 +1,8 @@
 ### C ###
 # Prerequisites
 *.d
+hello_arm32
+hello 
 
 # Object files
 *.o
