@@ -1,7 +1,8 @@
 #include<stdio.h>
 int main()
 {
-	printf("Hello Cross Compiler\n");
+
+	printf("Hello World\n");
 
 	return 0;
 }
