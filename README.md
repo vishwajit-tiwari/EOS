@@ -20,9 +20,36 @@ ___
 ## Day 1 
 
 * 2 Tier & 3 Tier Embedded System
+* Hardware
+    * CPU 
+        * PC/IP
+        * GPRs
+        * Flags
+        * Stack Pointer (MSP & PSP)
+    * Memory
+        * Code 
+        * Data
+    * Peripherals
+        * GPIO
+        * On Board Peripherals
+        * External Peripherals
+
 * Bare Metal System
-* Stack Frame 
-* Frame Pointer
+* SP, SF, Stack
+    * SP - Register inside CPU -> Pointing to the top of Stack.
+    * Stack - Chunk of memory.
+    * SF - Frame created on the stack when you call a function & Deleted when you return from the function.
+* Frame Pointer - Points to the base of frame.
+* How are arguments pass to the function ?
+    * on the Stack
+    * on the Register
+
+---
+
+
+
+
+
 
 
 
