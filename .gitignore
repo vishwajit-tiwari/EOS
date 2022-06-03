@@ -1,10 +1,6 @@
 ### C ###
 # Prerequisites
 *.d
-hello_arm32
-hello
-*.vscode
- *.json 
 
 # Object files
 *.o
@@ -55,3 +51,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Additional Files to ingnore
+hello_arm32
+hello
+*.vscode
+*.json 
+*.gitignore
