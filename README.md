@@ -18,7 +18,7 @@
 ___
 
 ## Day 1 
-___
+
 * **2 Tier & 3 Tier Embedded System**
 * **Hardware**
     * CPU 
@@ -47,7 +47,7 @@ ___
 ---
 
 ## Day 2
-___
+
 * **Booting procedure**
     * ROM BL (ROM Bootloader)
     * PBL (Primary Bootloader)
@@ -68,6 +68,5 @@ ___
 ---
 
 ## Day 3
-___
 
 * ARM cross toolchain
