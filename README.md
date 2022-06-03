@@ -63,5 +63,5 @@ ___
 
     * **make** - _make is a utility which helps you to compile and build the Project._
     * **make clen** - _is a another utility which helps you to clear the intermediate files and old excuitables._
-    * **make utilites** _reads the data or rules from the file called as Makefile._
+    * make utilites _reads the data or rules from the file called as Makefile._
 
