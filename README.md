@@ -69,4 +69,24 @@ ___
 
 ## Day 3
 
+* Makefile (Command line):
+    * Native compilation 
+        * make CC=gcc
+    * Cross compilation 
+        * make CC=arm-linux-gnueabi-gcc (32-bit)
+        * make CC=aarch64-none-linux-gnu-gcc (64-bit)
+
 * ARM cross toolchain
+    * Build System - where toolchain is compiled.
+    * Host System - where application is compiled.
+    * Target System - where binary/execuitable run.
+
+* Uboot
+* Program
+    * Program sections:
+        * Stack
+        * Heap
+        * .bss
+        * .data
+        * .text
+
