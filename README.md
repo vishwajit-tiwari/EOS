@@ -119,5 +119,22 @@ ___
         * User Heap
         * User Stack
 
+> Command to see Root File System:
+
+```bash
+ls /
+
+```
+
+* Root File System
+    * **/bin** - Holds the binary.
+    * **/sbin** - supervisor binary / privilleged binary.
+    * **/dev** - holds Device Driver entry point
+    * **/home** - every user has been created holds inside it.
+    * **/boot** - hols information about Kernel itself.
+    * **/root** - user which is super user is also called as root. It is highest privilleged user 
+    * **/etc** - all the configuration details about linux is stored
+    * **/var** - A lots of login information is stored & application data is also stored in some cases
+    * **/proc** - when the system boots up all the runtime information is stored for kernel as well as for processes. Its a virtual file system.
 
 
