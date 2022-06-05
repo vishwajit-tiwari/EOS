@@ -53,7 +53,7 @@ Mkfile.old
 dkms.conf
 
 # Additional Files to ingnore
-hello_arm32
+hello_arm
 hello
 *.vscode
 *.json 
