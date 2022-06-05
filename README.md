@@ -145,4 +145,18 @@ ls /
     * **/var** - A lots of login information is stored & application data is also stored in some cases
     * **/proc** - when the system boots up all the runtime information is stored for kernel as well as for processes. Its a virtual file system.
 
+* How to extract .rar files
+    ```bash
+    unrar e file_name.rar
+    ```
+* Command to see the bianry file
+    ```bash
+    binwalk -e file_name.bin
+    cd squashfs-root/
+    ```
 
+* Some usefull commands
+    ```bash
+    ps -el
+    pstree
+    ```
