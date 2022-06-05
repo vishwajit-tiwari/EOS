@@ -77,16 +77,47 @@ ___
         * make CC=aarch64-none-linux-gnu-gcc (64-bit)
 
 * ARM cross toolchain
-    * Build System - where toolchain is compiled.
-    * Host System - where application is compiled.
-    * Target System - where binary/execuitable run.
+    * **Build System** - where toolchain is compiled.
+    * **Host System** - where application is compiled.
+    * **Target System** - where binary / execuitable run.
 
 * Uboot
 * Program
     * Program sections:
-        * Stack
-        * Heap
-        * .bss
-        * .data
-        * .text
+        * **Stack** - function arguments, return address, local variables.
+        * **Heap** - run time allocation or dynamic memory allocation. 
+        * **.bss** - uninialised global variables
+        * **.data** - initialised global variable
+        * **.text / .code** - contains set of instructions.
+
+* Address Space
+* Program vs Process
+* **Program** - Dorment entity
+    * Execuitable / Binary
+    * Compiled
+* **Process** - Active entity
+    * Thread
+    * Process / Task - Program under execution
+
+* **Operating System:**
+
+    * Process Managment
+    * Memory Managment
+    * I/O Managment
+        * Device Drivers
+        * File System
+        * Networking
+        * GUI
+
+* Kernel Mode vs User Mode
+    * Kernel Mode / Supervisor Mode
+        * Kernel Space
+        * Kernel Heap
+        * Kernel Stack
+    * User Mode
+        * User Space
+        * User Heap
+        * User Stack
+
+
 
