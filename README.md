@@ -71,16 +71,16 @@ ___
 
 * Makefile (Command line):
     * Native compilation 
-        * 
+        
         ```bash
         make CC=gcc
         ```
     * Cross compilation 
-        * 
+        
         ```bash
         make CC=arm-linux-gnueabi-gcc (32-bit)
         ```
-        * 
+       
         ```bash
         make CC=aarch64-none-linux-gnu-gcc (64-bit)
         ```
