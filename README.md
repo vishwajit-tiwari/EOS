@@ -151,12 +151,19 @@ ls /
     ```
 * Command to see the bianry file
     ```bash
-    binwalk -e file_name.bin
+    binwalk -e file_name.bin 
     cd squashfs-root/
     ```
 
 * Some usefull commands
     ```bash
-    ps -el
-    pstree
+    ps -el  # To see the current process
+    pstree  # To see the process tree
+    ```
+
+* man pages
+    ```bash 
+    man 1 ps   # To see the current process
+    man -k pid # For the Process ID
+    man 2 getpid # to get the Process ID
     ```
