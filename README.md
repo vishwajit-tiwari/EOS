@@ -147,7 +147,7 @@ ls /
 
 * How to extract .rar files
     ```bash
-    unrar e file_name.rar
+    unrar e file_name.rar 
     ```
 * Command to see the bianry file
     ```bash
@@ -159,11 +159,25 @@ ls /
     ```bash
     ps -el  # To see the current process
     pstree  # To see the process tree
+    ps      # To see the Parent process which is bash.
     ```
 
 * man pages
     ```bash 
-    man 1 ps   # To see the current process
-    man -k pid # For the Process ID
+    man 1 ps     # To see the current process
+    man -k pid   # For the Process ID
     man 2 getpid # to get the Process ID
     ```
+
+* Process ID (PID)
+    * getpid()
+        * man -k pid
+        * man 2 getpid
+    * getppid()
+        * man -k ppid
+        * man 2 getppid
+
+* **Process Control Block (PCB)** - data structure created by OS to store information of runnig task / Process such as: 
+    * PID
+    * Base address of the Process
+    * Size of the Address Space
