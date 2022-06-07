@@ -159,7 +159,7 @@ ls /
     ```bash
     ps -el  # To see the current process
     pstree  # To see the process tree
-    ps      # To see the Parent process which is bash.
+
     ```
 
 * man pages
@@ -176,8 +176,23 @@ ls /
     * getppid()
         * man -k ppid
         * man 2 getppid
+    
+    ```bash
+    ps  # To see the Parent process which is bash / terminal.
+    ```
 
 * **Process Control Block (PCB)** - data structure created by OS to store information of runnig task / Process such as: 
     * PID
     * Base address of the Process
     * Size of the Address Space
+
+* Library Calls
+* System Calls
+
+> Strace : utility to trace system calls
+
+```bash
+strace   # To see which system calls are used to perform library calls
+```
+
+* Differentiated between library & system calls
