@@ -209,6 +209,25 @@ strace   # To see which system calls are used to perform library calls
 
 * Differentiated between library & system calls
 
+#### **Dynamic Library**
+
+* **archive:** ".a" is collection of intermediate object files (or .o files)which contains the defination of the function. 
+
+* How to extract archive library file
+    ```bash
+    find /usr/lib -name libc.a  # To find the library 
+    cp /usr/lib/x86_64-linux-gnu/libc.a libc_user/ # To copy library to user directory
+    ar --help  # To extract archive file 
+    ar -x libc.a # To get all the object files from library
+    objdump -S strlen.o
+    objdump -S strcpy.o
+    objdump -S strcpy.o
+    objdump -S printf.o
+    objdump -S scanf.o
+    ```
+
+* **libc:** is standard library of ANSI Standard.
+
 * **Reverse Engineering** 
     * Disassembly
         
@@ -217,3 +236,36 @@ strace   # To see which system calls are used to perform library calls
         arm-linux-guneabi-objdump -S main | more  # disassembly of ARM with extra options
         ```
 
+## Day 4
+
+* Library
+    * Static Libraries
+        * .a
+
+    * Dynamic Libraries aka Shared Libraries
+        * Windows => .dll
+        * Linux => .so
+
+    * Standard Library
+        * GCC -> libc.a / libc.so
+        * Bundled as part of compiler / toolchain
+        * ANSI
+        * eg. printf(), scanf(), strcpy(), strlen(), fopen() 
+
+    * User Library / Third Party Library
+        * App Developer
+        * eg. Your own arith functionality, mp3 decoding library
+
+* Archive command to create and extract libraries
+    ```bash
+    ar crv  # To create library
+    ar x    # To extract library 
+    ``` 
+
+* Command to compile Dynamic Libraries
+    ```bash
+    gcc -o projbin project.o -L. larith 
+    export LD_LIBRARY_PATH=. # To say dynamic library (or .so file) is present in current directory
+    ./projbin # Then execute
+    ```
+    
