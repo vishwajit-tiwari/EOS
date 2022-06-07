@@ -4,8 +4,10 @@ CC = gcc
 
 arithprog: main.o add.o sub.o mul.o div.o 
 	$(CC) -o arithprog main.o add.o sub.o mul.o div.o
+# To create library 
 	ar crv libarith.a add.o sub.o mul.o div.o
-	             
+# To extract .o files from library (or .a file)	
+#	ar -x libarith.a
 main.o: main.c 
 	$(CC) -c -o main.o main.c 
 add.o: add.c 
