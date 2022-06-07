@@ -186,8 +186,20 @@ ls /
     * Base address of the Process
     * Size of the Address Space
 
-* Library Calls
-* System Calls
+* **Library Calls** 
+    * printf(), scanf()
+    * gets(), puts()
+    * getc(), putc()
+    * fgetc(),fputc()
+    * fgets(), fputs()
+    * fopen(), fclose()
+    * fread(), fwrite()
+
+* **System Calls**
+    * open()
+    * read()
+    * write()
+    * close()
 
 > Strace : utility to trace system calls
 
@@ -196,3 +208,12 @@ strace   # To see which system calls are used to perform library calls
 ```
 
 * Differentiated between library & system calls
+
+* **Reverse Engineering** 
+    * Disassembly
+        
+        ```bash
+        arm-linux-gnueabi-objdump -S main.o  # disassembly of ARM 
+        arm-linux-guneabi-objdump -S main | more  # disassembly of ARM with extra options
+        ```
+
