@@ -7,7 +7,7 @@ arithprog: main.o add.o sub.o mul.o div.o
 # To create library 
 	$(CC) -shared -fPIC -o libarith.so add.o sub.o mul.o div.o 	
 # To extract .o files from library (or .a file)	
-#	ar -x libarith.a
+#	ar -x libarith.so
 main.o: main.c 
 	$(CC) -c -o main.o main.c 
 add.o: add.c 
