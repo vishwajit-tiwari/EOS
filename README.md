@@ -268,4 +268,21 @@ strace   # To see which system calls are used to perform library calls
     export LD_LIBRARY_PATH=. # To say dynamic library (or .so file) is present in current directory
     ./projbin # Then execute
     ```
-    
+* Command to see disassembly of static & dynamic library
+
+    ```bash
+    objdump -S staticlib/arithlibUser/projbin | more
+     # To see the disassembly of different sections. for static library
+    objdump -S dynamiclib/arithlibUser/projbin | more
+     # To see the disassembly of different sections. for dynamic library
+
+    ```
+* System Calls:
+    * open
+    * write 
+    * read
+    * close
+* File descriptor (fd)
+* Explore 
+    * return values of read & write system calls
+    * return values of open & close system calls
