@@ -375,7 +375,7 @@ strace   # To see which system calls are used to perform library calls
 
     chmod 666  # read & write for all three Root, User, Group (rw_ rw_ rw).
 
-    sudo chown vishu: vishu syscalls/syscalldemo/desdlog.txt
+    sudo chown vishu:vishu syscalls/syscalldemo/desdlog.txt
 
     ```
 
