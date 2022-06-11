@@ -236,6 +236,30 @@ strace   # To see which system calls are used to perform library calls
         arm-linux-guneabi-objdump -S main | more  # disassembly of ARM with extra options
         ```
 
+* Shell
+    * Command line
+    *  Parsing
+    * Built-in Commands
+    * Shell Scripts
+
+
+* User & Groups 
+    * User
+        * User ID
+        *  Group ID
+        * User Name
+        * Group Name
+        * Home Directory
+        * Shell
+    * Groups
+        * Group ID
+        * Group Name
+        * Group Members
+
+* Superuser 
+
+---
+
 ## Day 4
 
 * Library
@@ -283,6 +307,63 @@ strace   # To see which system calls are used to perform library calls
     * read
     * close
 * File descriptor (fd)
+    * Reserved File descriptor 
+        * fd = 0 --> stdinput
+        * fd = 1 --> stdout
+        * fd = 2 --> stdinput
+    * Unreserved File descriptor 
+        * fd = 3 onwards.......
+
 * Explore 
     * return values of read & write system calls
     * return values of open & close system calls
+
+---
+
+## Day 5
+
+* CPU (Uniprocessor)
+    * Physical Hardware
+        * PC
+        * SP
+        * GPR
+        * Flags
+* One CPU:
+    * One Process at any given instance
+    * Multiple Process
+
+* Memory
+    * Each process given a separate address space
+    * Address Space is divided into two parts :
+        1. User Address Space
+        1. Kernel Address Space
+    * Each address space is divided into 5 sections :
+        * text
+        * data
+        * bss
+        * heap
+        * stack
+* Context (Context of process)
+    * Contents of the registers PC, SP, GPR, FLags
+    * Context Saving
+        * Physical registers to logical copy
+    * Context Restoring
+        * Logical copy to physical registers
+    * Context Switching
+        * Save the current context
+        * Scheduling
+        * Switch the new context
+
+    ```bash
+    kill --help  # Kill command to stop running process.
+    kill -l  # List all the signals that are avialble.
+    killall -9 vlc # Kill signal to that
+    ```
+* Process State Diagram
+    * New
+    * Ready 
+    * Runnig
+    * Wating / Blocked
+    * Terminated / Exit
+
+* 
