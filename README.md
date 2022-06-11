@@ -366,4 +366,17 @@ strace   # To see which system calls are used to perform library calls
     * Wating / Blocked
     * Terminated / Exit
 
-* 
+* Utility to change file permission
+
+    ```bash
+    chmod 777  # read, write & excute (rwx_rwx_rwx) for Root, User, Group.
+
+    chmod 766  # read, write & execute for Root & read & write for User & group (rwx_rw_ rw_).
+
+    chmod 666  # read & write for all three Root, User, Group (rw_ rw_ rw).
+
+    sudo chown vishu: vishu syscalls/syscalldemo/desdlog.txt
+
+    ```
+
+
