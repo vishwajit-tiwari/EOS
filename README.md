@@ -378,5 +378,101 @@ strace   # To see which system calls are used to perform library calls
     sudo chown vishu:vishu syscalls/syscalldemo/desdlog.txt
 
     ```
+---
 
+## Day 6
+
+* Batch System
+* Multi User System
+* Multi Programing
+* Multi Tasking System
+* Multi Processing System
+* Multi Threading System
+ 
+
+* Process Scheduling
+    * Round Robin
+    * Priority
+    * FIFO
+    * Shortest Job First
+
+* Priority Based Scheduling
+    * Preemptive Scheduling
+    * Non-Preemptive Scheduling
+
+* Shortest Job First
+    * Preemptive Scheduling
+    * Non-preemptive Scheduling
+
+* Response Times
+* Throughput
+
+* Types of Process
+    * Zombie Process
+    * Orphan Process
+
+
+* ### **Docker Installation & Setup:**
+
+    * ### **Installation** 
+        ```bash
+        sudo apt  install docker.io 
+        ```
+    * ### **Setup**
+        ```bash
+        docker --version # To check version of docker
+        sudo systemctl status docker # To check status of docker 
+        sudo systemctl enable --now docker # To enable docker if disable previously
+        sudo systemctl status docker # To check status of docker again
+        ```
+    * ### **How to test Docker**
+        ```bash
+        sudo docker run hello world # To test docker is running
+        sudo docker images # To see available images
+        ```
+    
+* ### **EMUX installation & Setup**
+
+    * ### **Installation**
+        
+        * ### **Step 1 - Clone this repository**
+            ```bash
+            git clone --depth 1 --single-branch  https://github.com/therealsaumil/emux.git
+            ```
+        * ### **Step 2 - Build the docker volume and image**
+            ```bash
+            sudo su
+            cd emux
+            ./build-emux-volume
+            ./build-emux-docker
+            ```
+        * ### **Step 3 - Run EMUX!**
+        * Open a new terminal, and start the emux-docker container:
+            ```bash
+            ./run-emux-docker
+            ```
+        * You will be greeted with a purple shell   prompt [EMUX-DOCKER 🐳:~$]. After a while, it is common to have many terminals attached to the container. Coloured shell prompts makes it easy to remember where you are.
+
+        * Next, start the EMUX launcher:
+            ```bash
+            [EMUX-DOCKER 🐳:~$] launcher
+            ```
+        * and select any emulated device that you wish to run.
+
+        * ### **Step 4 - Launch the emulated device's userland processes.**
+        * Next, open a new terminal and attach to the running emux-docker container:
+            ```bash
+            ./emux-docker-shell
+            ```
+        * All attached container shells have a blue shell prompt. Invoke the userspace command to bring up the userland processes of the emulated target:
+            ```bash
+            [emux-docker shell 🐚:~$] userspace
+            ```
+        * For more information click on the link:
+        [EMUX](https://github.com/therealsaumil/emux)
+
+
+
+
+---
 
