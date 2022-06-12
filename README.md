@@ -431,6 +431,13 @@ strace   # To see which system calls are used to perform library calls
         sudo docker images # To see available images
         ```
     
+* ### **EMUX (formerly ARMX) Firmware Emulation Framework**
+    ![EMUX logo](https://github.com/therealsaumil/emux/raw/master/docs/img/ARMX-EMUX.png)
+
+* With the addition of MIPS, ARMX has changed its name to EMUX! Try out the Damn Vulnerable MIPS Router exercises included with the new EMUX Docker image.
+
+    ![Welcome, MIPS](https://github.com/therealsaumil/emux/raw/master/docs/img/emux-docker-whale2.jpg)
+
 * ### **EMUX installation & Setup**
 
     * ### **Installation**
@@ -457,6 +464,9 @@ strace   # To see which system calls are used to perform library calls
             ```bash
             [EMUX-DOCKER 🐳:~$] launcher
             ```
+
+            ![Launcher image](https://github.com/therealsaumil/emux/raw/master/docs/img/01-emux-launcher.png)
+
         * and select any emulated device that you wish to run.
 
         * ### **Step 4 - Launch the emulated device's userland processes.**
