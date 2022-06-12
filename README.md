@@ -474,9 +474,11 @@ strace   # To see which system calls are used to perform library calls
             ```
             ![WiFi Router Console](https://im5.ezgif.com/tmp/ezgif-5-db5c15f23e.webp)
 
+        * and select any emulated device that you wish to run from above list.
+
             ![Screenshot of WiFi router Console](https://im5.ezgif.com/tmp/ezgif-5-b0530f0eb2.webp)
 
-        * and select any emulated device that you wish to run.
+        * Now you will get the above console.        
 
         * ### **Step 4 - Launch the emulated device's userland processes.**
         * Next, open a new terminal and attach to the running emux-docker container:
@@ -496,11 +498,14 @@ strace   # To see which system calls are used to perform library calls
 
             ![Userspace launcher](https://im5.ezgif.com/tmp/ezgif-5-e1069103dd.webp)
 
+        * Select one of the avialble option.
+
             ![Screenshot of WiFi router Console](https://im5.ezgif.com/tmp/ezgif-5-b0530f0eb2.webp)
+        
+        * Now you are inside WiFi Router console.
 
         * For more information click on the link:
         [EMUX](https://github.com/therealsaumil/emux)
-
 
 ---
 
