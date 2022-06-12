@@ -456,6 +456,8 @@ strace   # To see which system calls are used to perform library calls
         * ### **Step 3 - Run EMUX!**
         * Open a new terminal, and start the emux-docker container:
             ```bash
+            sudo su
+            cd emux
             ./run-emux-docker
             ```
         * You will be greeted with a purple shell   prompt [EMUX-DOCKER 🐳:~$]. After a while, it is common to have many terminals attached to the container. Coloured shell prompts makes it easy to remember where you are.
@@ -467,21 +469,37 @@ strace   # To see which system calls are used to perform library calls
 
             ![Launcher image](https://github.com/therealsaumil/emux/raw/master/docs/img/01-emux-launcher.png)
 
+            ```bash
+            MIPSX login: root
+            ```
+            ![WiFi Router Console](https://im5.ezgif.com/tmp/ezgif-5-db5c15f23e.webp)
+
+            ![Screenshot of WiFi router Console](https://im5.ezgif.com/tmp/ezgif-5-b0530f0eb2.webp)
+
         * and select any emulated device that you wish to run.
 
         * ### **Step 4 - Launch the emulated device's userland processes.**
         * Next, open a new terminal and attach to the running emux-docker container:
             ```bash
+            sudo su
+            cd emux
             ./emux-docker-shell
             ```
+
+            ![Userland Process](https://im5.ezgif.com/tmp/ezgif-5-6b1dea66be.webp)
+        
+
         * All attached container shells have a blue shell prompt. Invoke the userspace command to bring up the userland processes of the emulated target:
             ```bash
             [emux-docker shell 🐚:~$] userspace
             ```
+
+            ![Userspace launcher](https://im5.ezgif.com/tmp/ezgif-5-e1069103dd.webp)
+
+            ![Screenshot of WiFi router Console](https://im5.ezgif.com/tmp/ezgif-5-b0530f0eb2.webp)
+
         * For more information click on the link:
         [EMUX](https://github.com/therealsaumil/emux)
-
-
 
 
 ---
