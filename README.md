@@ -17,7 +17,7 @@
 
 ___
 
-## Day 1 
+## **Day 1**
 
 * **2 Tier & 3 Tier Embedded System**
 * **Hardware**
@@ -46,7 +46,7 @@ ___
 
 ---
 
-## Day 2
+## **Day 2**
 
 * **Booting procedure**
     * ROM BL (ROM Bootloader)
@@ -67,7 +67,7 @@ ___
 
 ---
 
-## Day 3
+## **Day 3**
 
 * Makefile (Command line):
     * Native compilation 
@@ -131,7 +131,6 @@ ___
 
 ```bash
 ls /
-
 ```
 
 * Root File System
@@ -159,7 +158,6 @@ ls /
     ```bash
     ps -el  # To see the current process
     pstree  # To see the process tree
-
     ```
 
 * man pages
@@ -260,7 +258,7 @@ strace   # To see which system calls are used to perform library calls
 
 ---
 
-## Day 4
+## **Day 4**
 
 * Library
     * Static Libraries
@@ -299,7 +297,6 @@ strace   # To see which system calls are used to perform library calls
      # To see the disassembly of different sections. for static library
     objdump -S dynamiclib/arithlibUser/projbin | more
      # To see the disassembly of different sections. for dynamic library
-
     ```
 * System Calls:
     * open
@@ -320,7 +317,7 @@ strace   # To see which system calls are used to perform library calls
 
 ---
 
-## Day 5
+## **Day 5**
 
 * CPU (Uniprocessor)
     * Physical Hardware
@@ -376,11 +373,10 @@ strace   # To see which system calls are used to perform library calls
     chmod 666  # read & write for all three Root, User, Group (rw_ rw_ rw).
 
     sudo chown vishu:vishu syscalls/syscalldemo/desdlog.txt
-
     ```
 ---
 
-## Day 6
+## **Day 6**
 
 * Batch System
 * Multi User System
@@ -505,8 +501,10 @@ strace   # To see which system calls are used to perform library calls
         * Now you are inside WiFi Router console.
 
         * For more information click on the link:
-        [EMUX](https://github.com/therealsaumil/emux)
-        
+        [EMUX](https://github.com/therealsaumil/emux)        
         
 ---
+
+## **Day 7**
+
 
