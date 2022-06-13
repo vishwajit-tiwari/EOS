@@ -520,4 +520,26 @@ strace   # To see which system calls are used to perform library calls
         * Data is Sequential
         * open, read, write, close 
 
+* ### **Assignment**
 
+    1. Write your own utility using system calls (open, read, write, close) to copy data from one file to another file. Essentially you are implementing a copy utility. Fullfledged utility should support the following options:
+        
+        * Handling all the errors
+        * cp srcfile destfile
+
+    1. Write your own utility using library calls (fopen, fread, fwrite, fclose) to copy data from one file to another file. Essentially you are implementing a copy utility. Fullfledged utility should support the following options:
+        
+        * Handling all the errors
+        * cp srcfile destfile
+    
+    1. Research 
+        * Which of the following programs took more time to copy file
+            1. Small ->  1 MB file
+            1. Medium -> 100 MB file
+            1. Large ->  1 GB 
+
+    * Utilities Names
+        * cps (copy using system call)
+        * cpl (copy using library call)
+
+    * Justify your result => Why does system call / library call takes time to copy file.
