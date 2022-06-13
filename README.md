@@ -472,11 +472,11 @@ strace   # To see which system calls are used to perform library calls
             ```bash
             MIPSX login: root
             ```
-            ![WiFi Router Console](https://im5.ezgif.com/tmp/ezgif-5-db5c15f23e.webp)
+            ![WiFi Router Console](https://user-images.githubusercontent.com/87055637/173280112-579c5244-5bd2-4b80-80a7-34cf44535908.png)
 
         * and select any emulated device that you wish to run from above list.
 
-            ![Screenshot of WiFi router Console](https://im5.ezgif.com/tmp/ezgif-5-b0530f0eb2.webp)
+            ![Screenshot of WiFi router Console](https://user-images.githubusercontent.com/87055637/173280611-3db9db7b-bee4-4dbc-afad-a2321ec5a2c8.png)
 
         * Now you will get the above console.        
 
@@ -488,7 +488,7 @@ strace   # To see which system calls are used to perform library calls
             ./emux-docker-shell
             ```
 
-            ![Userland Process](https://im5.ezgif.com/tmp/ezgif-5-6b1dea66be.webp)
+            ![Userland Process](https://user-images.githubusercontent.com/87055637/173280847-80a2dd27-e2fe-479b-ba80-e65e81fbf70a.png)
         
 
         * All attached container shells have a blue shell prompt. Invoke the userspace command to bring up the userland processes of the emulated target:
@@ -496,16 +496,17 @@ strace   # To see which system calls are used to perform library calls
             [emux-docker shell 🐚:~$] userspace
             ```
 
-            ![Userspace launcher](https://im5.ezgif.com/tmp/ezgif-5-e1069103dd.webp)
+            ![Userspace launcher](https://user-images.githubusercontent.com/87055637/173280112-579c5244-5bd2-4b80-80a7-34cf44535908.png)
 
         * Select one of the avialble option.
 
-            ![Screenshot of WiFi router Console](https://im5.ezgif.com/tmp/ezgif-5-b0530f0eb2.webp)
-        
+            ![Screenshot of WiFi router Console](https://user-images.githubusercontent.com/87055637/173280611-3db9db7b-bee4-4dbc-afad-a2321ec5a2c8.png)
+
         * Now you are inside WiFi Router console.
 
         * For more information click on the link:
         [EMUX](https://github.com/therealsaumil/emux)
-
+        
+        
 ---
 
