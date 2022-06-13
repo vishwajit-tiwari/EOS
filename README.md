@@ -403,9 +403,10 @@ strace   # To see which system calls are used to perform library calls
 * Response Times
 * Throughput
 
-* Types of Process
+* Fork
     * Zombie Process
     * Orphan Process
+    * Child inherits file descriptor from the parent
 
 
 * ### **Docker Installation & Setup:**
@@ -506,5 +507,17 @@ strace   # To see which system calls are used to perform library calls
 ---
 
 ## **Day 7**
+
+* Interprocess Communication
+    * Pipes
+        * Unidirectional
+        * Related Processes
+        * Data is Sequetial
+        * pipe, read, write, close
+    * FIFO aka Named Pipes
+        * Unidirectional
+        * Unrelated Processes
+        * Data is Sequential
+        * open, read, write, close 
 
 
