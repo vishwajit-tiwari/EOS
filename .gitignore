@@ -38,6 +38,9 @@
 *.hex
 p1
 p2
+sender
+receiver
+pipedemo
 
 # Debug files
 *.dSYM/
