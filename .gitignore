@@ -41,6 +41,7 @@ p2
 sender
 receiver
 pipedemo
+threaddemo
 
 # Debug files
 *.dSYM/
