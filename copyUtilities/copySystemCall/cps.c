@@ -19,7 +19,6 @@ int main(int argc, char const *argv[])
 
     // Open Source file for reading
     open_fd1 = open(argv[1], O_RDONLY);
-
     if(open_fd1 == -1) {
         perror("Error openinig Source file\n");
         exit(EXIT_FAILURE);
@@ -27,7 +26,6 @@ int main(int argc, char const *argv[])
 
     // Open Destination file for Writing 
     open_fd2 = open(argv[2], 0666);     
-
     if(open_fd2 == -1) {
         perror("Error opening Destination file\n");
         exit(EXIT_FAILURE);
@@ -58,11 +56,9 @@ int main(int argc, char const *argv[])
                 perror("Error writing file\n");
                 exit(EXIT_FAILURE);
             }
-
             write_out += write_ret;
         }
         while(write_out < read_ret);
-
     }
 
     // Print this message when copy successfull
