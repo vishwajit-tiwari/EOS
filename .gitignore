@@ -36,6 +36,8 @@
 *.i*86
 *.x86_64
 *.hex
+p1
+p2
 
 # Debug files
 *.dSYM/
