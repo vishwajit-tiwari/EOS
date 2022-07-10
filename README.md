@@ -543,3 +543,70 @@ strace   # To see which system calls are used to perform library calls
         * cpl (copy using library call)
 
     * Justify your result => Why does system call / library call takes time to copy file.
+
+---
+
+## Day 8
+
+### Process Managment:-
+  1. Manage Process:-
+        * Create (or New)
+        * Ready
+        * Running
+        * Waiting
+        * Exit
+  2. Scheduling
+        * Context Save
+        * Scheduling
+        * Context Restore
+  3. Synchronisation
+        * Wating for Some Condition to meet
+  4. IPC (Inter Process Communication)
+        * PIPE
+        * FIFO
+        * Message Queue
+        * Shared Memory
+
+### POSIX Thread
+  1. pthread_create
+  2. pthread_join
+
+### Threads
+  1. Joinable Thread
+  2. Detachable Thread
+
+### Opaque Data Type ("_t")
+  1. Set
+  2. Get
+   
+Before you start using opaque data type:-
+1. initialize
+2. set
+3. get
+4. use and
+5. destroy after use
+
+    ```bash
+    pthread_attr_init()             # Initialize
+    pthread_attr_setdetachstate()   # Set
+    pthread_attr_destroy()          # Destroy
+    ```
+
+### Thread Attributes
+
+1. pthread_attr_t                  
+2. pthread_attr_init();             
+3. pthread_attr_setdetachstate();   
+4. pthread_attr_destroy()
+5. Scope
+6. Inherit Scheduling
+7. Scheduling Parameters (like priorities etc)
+8. Satck & Stack Size
+
+```bash
+pthread_attr_t                   # Thread Attributes
+pthread_attr_init();             # Thread init
+pthread_attr_setdetachstate();   # Thread set
+pthread_attr_destroy()           # Thread Destroy 
+```
+
