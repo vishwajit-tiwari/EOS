@@ -507,18 +507,18 @@ strace   # To see which system calls are used to perform library calls
 ---
 
 ## **Day 7**
+### Interprocess Communication
 
-* Interprocess Communication
-    * Pipes
-        * Unidirectional
-        * Related Processes
-        * Data is Sequetial
-        * pipe, read, write, close
-    * FIFO aka Named Pipes
-        * Unidirectional
-        * Unrelated Processes
-        * Data is Sequential
-        * open, read, write, close 
+* Pipes
+    * Unidirectional
+    * Related Processes
+    * Data is Sequetial
+    * pipe, read, write, close
+* FIFO aka Named Pipes
+    * Unidirectional
+    * Unrelated Processes
+    * Data is Sequential
+    * open, read, write, close 
 
 * ### **Assignment**
 
