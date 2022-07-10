@@ -409,24 +409,24 @@ strace   # To see which system calls are used to perform library calls
 * Child inherits file descriptor from the parent
 
 
-* ### **Docker Installation & Setup:**
+### **Docker Installation & Setup:**
 
-    * ### **Installation** 
-        ```bash
-        sudo apt  install docker.io 
-        ```
-    * ### **Setup**
-        ```bash
-        docker --version # To check version of docker
-        sudo systemctl status docker # To check status of docker 
-        sudo systemctl enable --now docker # To enable docker if disable previously
-        sudo systemctl status docker # To check status of docker again
-        ```
-    * ### **How to test Docker**
-        ```bash
-        sudo docker run hello world # To test docker is running
-        sudo docker images # To see available images
-        ```
+* #### **Installation** 
+    ```bash
+    sudo apt  install docker.io 
+    ```
+* #### **Setup**
+    ```bash
+    docker --version # To check version of docker
+    sudo systemctl status docker # To check status of docker 
+    sudo systemctl enable --now docker # To enable docker if disable previously
+    sudo systemctl status docker # To check status of docker again
+    ```
+* #### **How to test Docker**
+    ```bash
+    sudo docker run hello world # To test docker is running
+    sudo docker images # To see available images
+    ```
     
 * ### **EMUX (formerly ARMX) Firmware Emulation Framework**
     ![EMUX logo](https://github.com/therealsaumil/emux/raw/master/docs/img/ARMX-EMUX.png)
