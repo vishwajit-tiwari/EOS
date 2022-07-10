@@ -609,4 +609,26 @@ pthread_attr_init();             # Thread init
 pthread_attr_setdetachstate();   # Thread set
 pthread_attr_destroy()           # Thread Destroy 
 ```
+### Threads
+- Threads are light weight process
+- TCB (Thread Control Block)
+- Threads share the following sections with process
+    - Text
+    - Data
+    - Bss
+    - Heap
+- Threads don't share the following sections with process
+    - Satck
+    - means that each threads has its own stack
 
+### Difference b/w Function & Thread
+
+|   Funtion     |   Thread      |
+|   ----------  |   ----------  |
+|   Sequential  |   Concurent   |
+
+### Resource
+- Anything that is used by Thread or a Process is called resource. 
+- Shared resource
+  - Resource that is shared between Threads / Processes.
+  - Race condition => Data corruption
