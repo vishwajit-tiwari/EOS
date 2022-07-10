@@ -377,7 +377,7 @@ strace   # To see which system calls are used to perform library calls
 ---
 
 ## **Day 6**
-
+### Operating System Types
 * Batch System
 * Multi User System
 * Multi Programing
@@ -386,27 +386,27 @@ strace   # To see which system calls are used to perform library calls
 * Multi Threading System
  
 
-* Process Scheduling
-    * Round Robin
-    * Priority
-    * FIFO
-    * Shortest Job First
-
-* Priority Based Scheduling
-    * Preemptive Scheduling
-    * Non-Preemptive Scheduling
-
+### Process Scheduling
+* Round Robin
+* Priority
+* FIFO
 * Shortest Job First
-    * Preemptive Scheduling
-    * Non-preemptive Scheduling
+
+#### Priority Based Scheduling
+* Preemptive Scheduling
+* Non-Preemptive Scheduling
+
+#### Shortest Job First
+* Preemptive Scheduling
+* Non-preemptive Scheduling
 
 * Response Times
 * Throughput
 
-* Fork
-    * Zombie Process
-    * Orphan Process
-    * Child inherits file descriptor from the parent
+### Fork
+* Zombie Process
+* Orphan Process
+* Child inherits file descriptor from the parent
 
 
 * ### **Docker Installation & Setup:**
