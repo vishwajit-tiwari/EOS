@@ -3,6 +3,8 @@
 #include<stdlib.h>
 #include<pthread.h>
 
+pthread_t ptid;                     // Thread ID
+
 // Pressure Thread
 void * pressureThread(void *data) {
     for(int i = 0; i < 5; ++i) {
@@ -13,8 +15,7 @@ void * pressureThread(void *data) {
 int main(int argc, char const *argv[])
 {
     int thread_ret, thread_join_ret;
-    pthread_t ptid;                     // Thread ID
-
+    
     printf("Before thread creation\n");
 
     // int pthread_create(pthread_t *thread, const pthread_attr_t *attr,
