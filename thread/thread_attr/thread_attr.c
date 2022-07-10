@@ -53,6 +53,8 @@ int main(int argc, char const *argv[])
         exit(EXIT_FAILURE);
     }
 
+    pthread_attr_destroy(&attrD);           // Destory Thread
+
     printf("Thread joined\n");
 
     return 0;
