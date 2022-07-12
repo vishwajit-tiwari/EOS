@@ -68,6 +68,7 @@ nothread
 optimizedMulThread
 thread_attr
 threaddemo
+mutexdemo
 
 # Additional Files to ingnore
 *.vscode
