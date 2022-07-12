@@ -62,6 +62,12 @@ dkms.conf
 hello_arm
 hello
 sectiondemo
+racecondition
+multiThreads
+nothread
+optimizedMulThread
+thread_attr
+threaddemo
 
 # Additional Files to ingnore
 *.vscode
