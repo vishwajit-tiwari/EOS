@@ -69,6 +69,7 @@ optimizedMulThread
 thread_attr
 threaddemo
 mutexdemo
+mutualExSemaphore
 
 # Additional Files to ingnore
 *.vscode
