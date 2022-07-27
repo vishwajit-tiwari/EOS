@@ -70,6 +70,7 @@ thread_attr
 threaddemo
 mutexdemo
 mutualExSemaphore
+sigSem
 
 # Additional Files to ingnore
 *.vscode
