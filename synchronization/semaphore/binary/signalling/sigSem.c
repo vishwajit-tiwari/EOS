@@ -26,7 +26,6 @@ sem_t s1, s2;
  * @param data 
  * @return void* 
  */
-
 void * inputThread(void *data) 
 {
     printf("\nInside %s:\n", __FUNCTION__);
@@ -48,7 +47,6 @@ void * inputThread(void *data)
  * @param data 
  * @return void* 
  */
-
 void * procThread(void *data) 
 {
     printf("\nInside %s:\n", __FUNCTION__);
