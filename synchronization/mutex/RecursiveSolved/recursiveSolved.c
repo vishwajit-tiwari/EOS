@@ -15,25 +15,25 @@
 
 // Global Variable
 int count = 0;
-pthread_t incId, decId;
 
 // Mutex
 pthread_mutex_t mutex_conut;
+pthread_mutexattr_t mutex_count_attr;           // mutex attributes
 
 // Increament Thread
-void * incThread(void * data) {
+void *incThread(void *data) {
     printf("Inside %s:\n\n", __FUNCTION__);
     while(1) {
-        printf("Inc: Locking 1st Time\n");
-        pthread_mutex_lock(&mutex_conut);       // mutex lock
-        printf("Inc: Locking 2nd Time\n");
-        pthread_mutex_lock(&mutex_conut);       // mutex lock
+        printf("Inc: Locking 1st time\n");
+        pthread_mutex_lock(&mutex_conut);       // mutex 1st lock
+        printf("Inc: Locking 2nd time\n");
+        pthread_mutex_lock(&mutex_conut);       // mutex 2nd lock
         count++;
         printf("Inc Count = %d\n",count);
-        pthread_mutex_unlock(&mutex_conut);     // mutex unlock
-        printf("Inc: Unlocked 1st Time\n");
-        pthread_mutex_unlock(&mutex_conut);     // mutex unlock
-        printf("Inc: Unlocked 2nd Time\n");
+        pthread_mutex_unlock(&mutex_conut);     // mutex 1st unlock
+        printf("Inc: Unlocked 1st time\n");
+        pthread_mutex_unlock(&mutex_conut);     // mutex 2nd unlock
+        printf("Inc: Unlocked 2nd time\n");
     }
 }
 
@@ -42,26 +42,28 @@ void * decThread(void * data) {
     printf("Inside %s:\n\n", __FUNCTION__);
     while (1)
     {
-        printf("Dec: Locking 1st Time\n");
-        pthread_mutex_lock(&mutex_conut);       // mutex lock
-        printf("Dec: Locking 2nd Time\n");
+        printf("Dec: Locking\n");
         pthread_mutex_lock(&mutex_conut);       // mutex lock
         count--;
         printf("Dec Count = %d\n", count);
         pthread_mutex_unlock(&mutex_conut);     // mutex unlock
-        printf("Dec: Unlocked 1st Time\n");
-        pthread_mutex_unlock(&mutex_conut);     // mutex unlock
-        printf("Dec: Unlocked 2nd Time\n");
+        printf("Dec: Unlocked\n");
     }
     
-}
+} 
 
 int main(int argc, char const *argv[])
 {
+    pthread_t incId, decId;
+
     printf("Inside %s : Before Thread Creation\n", __FUNCTION__);
 
-    // mutex initialization
-    pthread_mutex_init(&mutex_conut,NULL);      
+    // Configure the mutex attributes
+    pthread_mutexattr_init(&mutex_count_attr);
+    pthread_mutexattr_settype(&mutex_count_attr, PTHREAD_MUTEX_RECURSIVE);
+
+    // Initialize the mutex
+    pthread_mutex_init(&mutex_conut,&mutex_count_attr);      
 
     // Create Threads
     pthread_create(&incId,NULL,incThread,NULL);
