@@ -33,9 +33,9 @@ int main(int argc, char const *argv[])
     p2_attr.mq_curmsgs = 0;
     p2_attr.mq_flags = 0;
     p2_attr.mq_maxmsg = 4;
-    p2_attr.mq_msgsize = MAX_SIZE;
+    p2_attr.mq_msgsize = 128;
 
-    mqd = mq_open("/MessageQueue", O_RDONLY, S_IRUSR | S_IWUSR, &p2_attr);
+    mqd = mq_open("/MessageQueue", O_RDONLY | O_CREAT, S_IRUSR | S_IWUSR, &p2_attr);
 
     if(mqd<0) {
         perror("error in mq_open ");
@@ -65,5 +65,6 @@ int main(int argc, char const *argv[])
     mq_close(mqd);
 
     return 0;
+
 }
 

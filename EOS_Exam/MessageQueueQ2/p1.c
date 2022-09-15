@@ -39,7 +39,7 @@ int main(int argc, char const *argv[])
     p1_attr.mq_curmsgs = 0;
     p1_attr.mq_flags = 0;
     p1_attr.mq_maxmsg = 4;
-    p1_attr.mq_msgsize = MAXBUFF;
+    p1_attr.mq_msgsize = 128;
 
     /********************************Open Message Queue**************************************/
     mqDescriptor = mq_open("/MessageQueue", O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR, &p1_attr);
