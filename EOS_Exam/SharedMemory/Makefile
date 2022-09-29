@@ -21,3 +21,4 @@ p2.o: p2.c
 clean:
 	rm -rf *.o p1 p2 
 
+
