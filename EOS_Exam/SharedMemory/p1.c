@@ -21,15 +21,14 @@
 #include <sys/mman.h> 
 //For string operations
 #include<string.h>
-
+//for semaphore
 #include<semaphore.h>
+// for shared memory
+#include<sys/shm.h>
 
 //Global varaibles
 #define MAX_SIZE 81920
 unsigned char buffp1[MAX_SIZE];
-char *ptr_mmap;
-// sem_t s1, s2;
-
 int ret_shm_open;
 int ret_ftruncate;
 int openfd;
@@ -67,73 +66,53 @@ int main(int argc, char const *argv[])
     printf("read sys call : success\n");
     printf("read : %ld-bytes\n", retRead);
 
-    char *stringPtr = buffp1;
-    size_t len = strlen(stringPtr);
+    char *string = buffp1;
+    size_t len = strlen(string);
+    printf("len = %ld-bytes\n", len);
     /*****************************************************/
 
     //Open shared memeory space
-    ret_shm_open = shm_open("/sharedmemory", O_RDWR | O_CREAT, S_IRUSR | S_IWUSR);
+    ret_shm_open = shm_open("/sharedmemory", O_RDWR, 0);
     if(ret_shm_open<0) {
         perror("error in shm_open");
         exit(EXIT_FAILURE);
     }
     else printf("shm_open : success\n");
 
-
-    // //Move to predefined length
-    // ret_ftruncate = ftruncate(ret_shm_open, MAX_SIZE);
-    // if(ret_ftruncate<0) {
-    //     perror("error in ftruncate");
-    //     exit(EXIT_FAILURE);
-    // }
-    // else printf("ftruncate : success\n");
-
     //Map or Unmap files into memory
-    shmptr = mmap(NULL, sizeof(shmptr), PROT_READ | PROT_WRITE, MAP_SHARED, ret_shm_open, 0);
+    shmptr = mmap(NULL, MAX_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, ret_shm_open, 0);
     if(shmptr == MAP_FAILED) {
         perror("error in mmap");
         exit(EXIT_FAILURE);
     }
     printf("mmap : success\n");
-    printf("mapped area : %d\n",*shmptr);
 
-    // Copy data into shared memory object
+    // Print the number of bytes used in buffer
     shmptr->cnt = len;
-    memcpy(&shmptr->buff,stringPtr,len);
+    printf("cnt = %ld-bytes\n",shmptr->cnt);
 
-    // Initialize Semaphore
-    // int retsem = sem_init(&shmptr->s1,1,0);
-    // if(retsem==-1) {
-    //     perror("error in sem_init");
-    //     exit(EXIT_FAILURE);
-    // }
-    // int retsem2 = sem_init(&shmptr->s2,1,0);
-    // if(retsem2==-1) {
-    //     perror("error in sem_init2");
-    //     exit(EXIT_FAILURE);
-    // }
+    // Copy data into the shared memory object
+    memcpy(&shmptr->buff,buffp1,len);
+    printf("memcpy : success\n");
+    // printf("\nBuffer data :%s\n", shmptr->buff);
 
-    //Send data to Process p2
-    int length = strlen(buffp1);
-    if(buffp1[length-1] == '\n') {
-        buffp1[length-1] = '\0';
-
-        // Wait for sem1 to be posted
-        if(sem_wait(&s1)==-1) {
-            perror("error in sem_wait");
-            exit(EXIT_FAILURE);
-        }
-
-        strcpy(shmptr,buffp1);
-        printf("\n%s\n",shmptr);
-
-        // Post sem2 to be used by P2
-        if(sem_post(&s2) == -1) {
-            perror("error in sem_post");
-            exit(EXIT_FAILURE);
-        }
-        printf("Data : sent success\n");
+    // Post sem1 to be used by P2
+    if(sem_post(&shmptr->s1) == -1) {
+        perror("error in sem_post");
+        exit(EXIT_FAILURE);
     }
+    printf("sem_post : s1 : success\n");
+
+    //Print content of shared memory buffer
+    // printf("\n%s\n",shmptr->buff);
+
+    // Wait for sem2 to be posted
+    if(sem_wait(&shmptr->s2)==-1) {
+        perror("error in sem_wait");
+        exit(EXIT_FAILURE);
+    }
+    printf("sem_wait : s2 : success\n");    
+    printf("Data : sent success\n");
 
     //Unlink shared memory object
     shm_unlink("/sharedmemory");
